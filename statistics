@@ -1,13 +1,20 @@
+LEGEND:
+m-{n} = my tests, found in various places
+cod-{n} = Codility tests
+
 Solved:
 
 2018.March
+24.03 - saladPizzaCake_cod-3
+24.03 - minLasersForCoords_cod-2
+24.03 - smallestPositiveInteger_cod-1
 23.03 - array.LongestSequenceOfNumbers_m-1
 
 Done with help:
 ...
 
 Done by myself but need attention:
-m-1,
+m-1, cod-2, cod-3
 
 Need to be done:
 ...

@@ -6,6 +6,7 @@ cf-{n} = Codefights tests
 Solved:
 
 2018.March
+28.03 - areSimilar_cf-5
 27.03 - addBorder_cf-4
 27.03 - alternatingSums_cf-3
 26.03 - reverseParentheses_cf-2
@@ -19,7 +20,7 @@ Done with help:
 ...
 
 Done by myself but need attention:
-m-1, cod-2, cod-3, cf-1, cf-2
+m-1, cod-2, cod-3, cf-1, cf-2, cf-5
 
 Need to be done:
 ...

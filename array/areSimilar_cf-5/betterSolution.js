@@ -5,3 +5,4 @@ function areSimilar(a, b) {
     ad.length == 0 || (ad.length == 2 && ad.join("") == bd.reverse().join(""))
   );
 }
+

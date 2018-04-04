@@ -6,7 +6,8 @@ cf-{n} = Codefights tests
 Solved:
 
 2018.April
-03.04 - isIPv4Address_cf_10
+04.04 - avoidObstacles_cf-11
+03.04 - isIPv4Address_cf-10
 02.04 - arrayMaximalAdjacentDifference_cf-9
 01.04 - areEquallyStrong_cf-8
 
@@ -24,7 +25,7 @@ Solved:
 23.03 - array.LongestSequenceOfNumbers_m-1
 
 Done with help:
-...
+cf-11
 
 Done by myself but need attention:
 m-1, cod-2, cod-3, cf-1, cf-2, cf-5, cf-7, cf-8

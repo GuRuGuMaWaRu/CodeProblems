@@ -6,6 +6,7 @@ cf-{n} = Codefights tests
 Solved:
 
 2018.April
+06.04 - boxBlur_cf-12
 04.04 - avoidObstacles_cf-11
 03.04 - isIPv4Address_cf-10
 02.04 - arrayMaximalAdjacentDifference_cf-9

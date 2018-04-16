@@ -6,6 +6,7 @@ cf-{n} = Codefights tests
 Solved:
 
 2018.April
+16.04 - arrayMaxConsecutiveSum_cf-26
 15.04 - differentSymbolsNaive_cf-25
 15.04 - firstDigit_cf-24
 15.04 - stringsRearrangement_cf-23
@@ -39,7 +40,7 @@ Solved:
 23.03 - array.LongestSequenceOfNumbers_m-1
 
 Done with help:
-cf-11
+cf-11, cf-26
 
 Done by myself but need attention:
 m-1, cod-2, cod-3, cf-1, cf-2, cf-5, cf-7, cf-8, cf-12

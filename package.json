@@ -1,0 +1,26 @@
+{
+  "name": "learning__code_problems",
+  "version": "1.0.0",
+  "description": "Code problems",
+  "main": "tmp.js",
+  "dependencies": {},
+  "devDependencies": {
+    "husky": "^0.14.3",
+    "prettier": "^1.12.1",
+    "pretty-quick": "^1.4.1"
+  },
+  "scripts": {
+    "precommit": "pretty-quick --staged"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GuRuGuMaWaRu/CodeProblems.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GuRuGuMaWaRu/CodeProblems/issues"
+  },
+  "homepage": "https://github.com/GuRuGuMaWaRu/CodeProblems#readme"
+}

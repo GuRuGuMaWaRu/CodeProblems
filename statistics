@@ -6,6 +6,7 @@ cf-{n} = Codefights tests
 Solved:
 
 2018.April
+25.04 - bishopAndPawn_cf-31
 24.04 - digitDegree_cf-30
 19.04 - longestDigitsPrefix_cf-29
 18.04 - knapsackLight_cf-28
@@ -48,7 +49,7 @@ cf-11, cf-26
 
 Done by myself but need attention:
 m-1, cod-2, cod-3, cf-1, cf-2, cf-5, cf-7, cf-8, cf-12
-cf-13, cf-20, cf-21, cf-22, cf-25, cf-28
+cf-13, cf-20, cf-21, cf-22, cf-25, cf-28, cf-31
 
 Need to be done:
 ...

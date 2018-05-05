@@ -6,6 +6,7 @@ cf-{n} = Codefights tests
 Solved:
 
 2018.May
+05.05 - deleteDigit_cf-40
 04.05 - chessKnight_cf-39
 02.05 - lineEncoding_cf-38
 01.05 - isDigit_cf-37
@@ -60,7 +61,7 @@ cf-11, cf-26
 Done by myself but need attention:
 m-1, cod-2, cod-3, cf-1, cf-2, cf-5, cf-7, cf-8, cf-12,
 cf-13, cf-20, cf-21, cf-22, cf-25, cf-28, cf-31, cf-32,
-cf-34, cf-36, cf-37, cf-38, cf-39
+cf-34, cf-36, cf-37, cf-38, cf-39, cf-40
 
 Need to be done:
 ...

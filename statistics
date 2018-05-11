@@ -6,6 +6,7 @@ cf-{n} = Codefights tests
 Solved:
 
 2018.May
+11.05 - digitsProduct_cf-45
 09.05 - differentSquares_cf-44
 08.05 - sumUpNumbers_cf-43
 07.05 - validTime_cf-42
@@ -60,7 +61,7 @@ Solved:
 23.03 - array.LongestSequenceOfNumbers_m-1
 
 Done with help:
-cf-11, cf-26
+cf-11, cf-26, cf-45
 
 Done by myself but need attention:
 m-1, cod-2, cod-3, cf-1, cf-2, cf-5, cf-7, cf-8, cf-12,

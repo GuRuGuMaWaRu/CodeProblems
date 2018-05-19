@@ -6,6 +6,7 @@ cf-{n} = Codefights tests
 Solved:
 
 2018.May
+19.05 - zigzag_cf-50
 18.05 - checkGrid_cf-49
 17.05 - spiralNumbers_cf-48
 14.05 - messageFromBinaryCode_cf-47
@@ -70,7 +71,8 @@ cf-11, cf-26, cf-45, cf-47, cf-48 (check 2nd solution)
 Done by myself but need attention:
 m-1, cod-2, cod-3, cf-1, cf-2, cf-5, cf-7, cf-8, cf-12,
 cf-13, cf-20, cf-21, cf-22, cf-25, cf-28, cf-31, cf-32,
-cf-34, cf-36, cf-37, cf-38, cf-39, cf-40, cf-41, cf-49
+cf-34, cf-36, cf-37, cf-38, cf-39, cf-40, cf-41, cf-49,
+cf-50, 
 
 Need to be done:
 ...

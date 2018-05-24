@@ -6,6 +6,7 @@ cf-{n} = Codefights tests
 Solved:
 
 2018.May
+24.05 - sudoku2_cf-53
 20.05 - largestNumber_cf-52
 20.05 - addTwoDigits_cf-51
 19.05 - zigzag_cf-50
@@ -69,12 +70,13 @@ Solved:
 
 Done with help:
 cf-11, cf-26, cf-45, cf-47, cf-48 (check 2nd solution)
+cf-53
 
 Done by myself but need attention:
 m-1, cod-2, cod-3, cf-1, cf-2, cf-5, cf-7, cf-8, cf-12,
 cf-13, cf-20, cf-21, cf-22, cf-25, cf-28, cf-31, cf-32,
 cf-34, cf-36, cf-37, cf-38, cf-39, cf-40, cf-41, cf-49,
-cf-50, cf-51
+cf-50, cf-51, cf-52
 
 Need to be done:
 ...

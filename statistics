@@ -5,9 +5,13 @@ cf-{n} = Codefights tests
 
 Solved:
 
+2018.June
+
+02.05 - arithmeticExpression_cf-64
+01.06 - extraNumber_cf-62, isInfiniteProcess_cf-63
+
 2018.May
-31.05 - knapsackLight_cf-61
-31.05 - reachNextLevel_cf-60
+31.05 - knapsackLight_cf-61, reachNextLevel_cf-60
 30.05 - phoneCall_cf-59
 29.05 - lateRide_cf-58
 28.05 - circleOfNumbers_cf-57
@@ -15,8 +19,7 @@ Solved:
 26.05 - seatsInTheatre_cf-55
 25.05 - candies_cf-54
 24.05 - sudoku2_cf-53
-20.05 - largestNumber_cf-52
-20.05 - addTwoDigits_cf-51
+20.05 - largestNumber_cf-52, addTwoDigits_cf-51
 19.05 - zigzag_cf-50
 18.05 - checkGrid_cf-49
 17.05 - spiralNumbers_cf-48
@@ -44,18 +47,13 @@ Solved:
 18.04 - knapsackLight_cf-28
 17.04 - growingPlant_cf-27
 16.04 - arrayMaxConsecutiveSum_cf-26
-15.04 - differentSymbolsNaive_cf-25
-15.04 - firstDigit_cf-24
-15.04 - stringsRearrangement_cf-23
+15.04 - differentSymbolsNaive_cf-25, firstDigit_cf-24, stringsRearrangement_cf-23
 13.04 - stringsRearrangement_cf-22
 12.04 - absoluteValuesSumMinimization_cf-21
-11.04 - depositProfit_cf-20
-11.04 - circleOfNumbers_cf-19
+11.04 - depositProfit_cf-20, circleOfNumbers_cf-19
 10.04 - chessBoardCellColor_cf-18
-09.04 - alphabeticShift_cf-17
-09.04 - variableName_cf-16
-08.04 - evenDigitsOnly_cf-15
-08.04 - arrayReplace_cf-14
+09.04 - alphabeticShift_cf-17, variableName_cf-16
+08.04 - evenDigitsOnly_cf-15, arrayReplace_cf-14
 07.04 - mineSweeper_cf-13
 06.04 - boxBlur_cf-12
 04.04 - avoidObstacles_cf-11
@@ -67,13 +65,10 @@ Solved:
 31.03 - palindromeRearranging_cf-7
 30.03 - arrayChange_cf-6
 29.03 - areSimilar_cf-5
-27.03 - addBorder_cf-4
-27.03 - alternatingSums_cf-3
+27.03 - addBorder_cf-4, alternatingSums_cf-3
 26.03 - reverseParentheses_cf-2
 25.03 - sortByHeight_cf-1
-24.03 - saladPizzaCake_cod-3
-24.03 - minLasersForCoords_cod-2
-24.03 - smallestPositiveInteger_cod-1
+24.03 - saladPizzaCake_cod-3, minLasersForCoords_cod-2, smallestPositiveInteger_cod-1
 23.03 - array.LongestSequenceOfNumbers_m-1
 
 Done with help:
@@ -84,7 +79,8 @@ Done by myself but need attention:
 m-1, cod-2, cod-3, cf-1, cf-2, cf-5, cf-7, cf-8, cf-12,
 cf-13, cf-20, cf-21, cf-22, cf-25, cf-28, cf-31, cf-32,
 cf-34, cf-36, cf-37, cf-38, cf-39, cf-40, cf-41, cf-49,
-cf-50, cf-51, cf-52, cf-54, cf-56, cf-57, cf-59, cf-61
+cf-50, cf-51, cf-52, cf-54, cf-56, cf-57, cf-59, cf-61,
+cf-62, cf-63,
 
 Need to be done:
 ...

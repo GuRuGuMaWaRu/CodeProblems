@@ -10,14 +10,7 @@ class TestComponent extends React.PureComponent {
   _printKeys = obj => {
     // Add your code here and modify the return
     // statement
-    const updatedObj = Object.keys(obj)
-      .filter((item, i) => i % 2 !== 0)
-      .reduce((result, item) => {
-        result[item] = obj[item];
-        return result;
-      }, {});
-
-    return updatedObj;
+    return Object.keys(obj).filter((item, i) => i % 2 !== 0);
   };
 
   render() {

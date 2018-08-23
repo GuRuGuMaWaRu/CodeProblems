@@ -6,7 +6,8 @@ cf-{n} = Codefights tests
 Solved:
 
 2018.August
-00.00 - increaseNumberRoundness_cf-82
+23.08 - rounders_cf-83
+19.08 - increaseNumberRoundness_cf-82
 17.08 - appleBoxes_cf-81
 16.08 - additionWithoutCarrying_cf-80
 15.08 - lineUp_cf-79
@@ -100,7 +101,7 @@ cf-13, cf-20, cf-21, cf-22, cf-25, cf-28, cf-31, cf-32,
 cf-34, cf-36, cf-37, cf-38, cf-39, cf-40, cf-41, cf-49,
 cf-50, cf-51, cf-52, cf-54, cf-56, cf-57, cf-59, cf-61,
 cf-62, cf-63, cf-65, cf-66, cf-68, cf-69, cf-71, cf-72,
-cf-79
+cf-79, cf-83
 
 Need to be done:
 ...

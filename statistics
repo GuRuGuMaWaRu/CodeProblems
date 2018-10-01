@@ -5,9 +5,11 @@ cf-{n} = Codefights tests
 
 Solved:
 
+2018.October
+01.10 - firstReverseTry_cf-89
+
 2018.September
---.-- - arrayReplace_cf-88
-27.09 - createArray_cf-87
+27.09 - createArray_cf-87, arrayReplace_cf-88
 26.09 - countBlackCells_cf-86
 18.09 - candles_cf-85
 02.09 - lemonadePrices_cf-84

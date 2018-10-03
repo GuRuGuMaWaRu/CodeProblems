@@ -6,7 +6,8 @@ cf-{n} = Codefights tests
 Solved:
 
 2018.October
---.-- - isSmooth_cf-92
+03.10 - replaceMiddle_cf-93
+02.10 - isSmooth_cf-92
 01.10 - firstReverseTry_cf-89, concatenateArrays_cf-90, removeArrayPart_cf-91
 
 2018.September

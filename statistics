@@ -6,6 +6,7 @@ cf-{n} = Codefights tests
 Solved:
 
 2018.October
+--.-- - isPower_cf-95
 04.10 - makeArrayConsecutive2_cf-94
 03.10 - replaceMiddle_cf-93
 02.10 - isSmooth_cf-92

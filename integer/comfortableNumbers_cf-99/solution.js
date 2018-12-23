@@ -3,10 +3,10 @@ function sumNumbers(num) {
 
   while (num) {
     sum += num % 10;
-    num = num / 10;
+    num = Math.trunc(num / 10);
   }
 
-  return ~~sum;
+  return sum;
   // return String(num)
   //   .split("")
   //   .reduce((total, currNumber) => total + parseInt(currNumber, 10), 0);
@@ -20,6 +20,7 @@ function comfortableNumbers(l, r) {
       const sumA = sumNumbers(i);
       const sumB = sumNumbers(j);
 
+      // console.log(i, sumA, j, sumB);
       if (j >= i - sumA && j <= i + sumA && i >= j - sumB && i <= j + sumB) {
         totalPairs++;
       }
@@ -39,11 +40,12 @@ const f1 = [1, 100]; // ???
 const f2 = [1, 20]; // ???
 const f3 = [400, 440]; // ???
 const f4 = [720, 735]; // ???
+const f5 = [720, 731]; // ???
 
-console.log(comfortableNumbers(...f4));
-// console.log(comfortableNumbers(...v1));
-// console.log(comfortableNumbers(...v2));
-// console.log(comfortableNumbers(...v3));
-// console.log(comfortableNumbers(...v4));
-// console.log(comfortableNumbers(...v5));
-// console.log(comfortableNumbers(...v6));
+// console.log(comfortableNumbers(...f5));
+console.log(comfortableNumbers(...v1));
+console.log(comfortableNumbers(...v2));
+console.log(comfortableNumbers(...v3));
+console.log(comfortableNumbers(...v4));
+console.log(comfortableNumbers(...v5));
+console.log(comfortableNumbers(...v6));

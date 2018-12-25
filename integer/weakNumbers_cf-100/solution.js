@@ -1,7 +1,7 @@
 function findDivisors(num) {
   let divisors = 0;
 
-  for (let i = 1; i < num; i++) {
+  for (let i = 1; i <= num; i++) {
     if (num % i === 0) {
       divisors = divisors + 1;
     }
@@ -16,10 +16,12 @@ function weakNumbers(n) {
   for (let i = 1; i <= n; i++) {
     const numberOfDivisors = findDivisors(i);
 
-    if (divisors[numberOfDivisors]) {
-      divisors[numberOfDivisors] = divisors[numberOfDivisors] + 1;
-    } else {
-      divisors[numberOfDivisors] = 1;
+    if (numberOfDivisors > 0) {
+      if (divisors[numberOfDivisors]) {
+        divisors[numberOfDivisors] = divisors[numberOfDivisors] + 1;
+      } else {
+        divisors[numberOfDivisors] = 1;
+      }
     }
   }
 
@@ -34,8 +36,8 @@ const v5 = 500; // [403, 1]
 const v6 = 4; // [0, 4]
 
 console.log(weakNumbers(v1));
-console.log(weakNumbers(v2));
-console.log(weakNumbers(v3));
-console.log(weakNumbers(v4));
-console.log(weakNumbers(v5));
-console.log(weakNumbers(v6));
+// console.log(weakNumbers(v2));
+// console.log(weakNumbers(v3));
+// console.log(weakNumbers(v4));
+// console.log(weakNumbers(v5));
+// console.log(weakNumbers(v6));

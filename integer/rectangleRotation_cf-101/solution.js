@@ -1,0 +1,1 @@
+function rectangleRotation(a, b) {}

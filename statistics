@@ -5,8 +5,20 @@ cf-{n} = Codefights tests
 
 Solved:
 
+2019.April
+--.-- - isMAC48Address_cf-109
+22.04 - htmlEndTagByStartTag_cf-108
+21.04 - findEmailDomain_cf-107
+21.04 - isCaseInsensitivePalindrome_cf-106 (there was a very simple solution! How did I miss it???)
+20.04 - isTandemRepeat_cf-105
+20.04 - properNounCorrection_cf-104
+19.04 - encloseInBrackets_cf-103
+19.04 - crosswordFormation_cf-102 (there should be a formula for this!)
+
+2019.March
+25.03 - rectangleRotation_cf-101
+
 2018.December
---.-- - rectangleRotation_cf-101
 26.12 - weakNumbers_cf-100
 23.12 - comfortableNumbers_cf-99
 
@@ -114,7 +126,7 @@ Solved:
 
 Done with help:
 cf-11, cf-26, cf-45, cf-47, cf-48 (check 2nd solution)
-cf-53, cf-73, cf-74, cf-75, cf-86, cf-99
+cf-53, cf-73, cf-74, cf-75, cf-86, cf-99, cf-101 (copied solution)
 
 Done by myself but need attention:
 m-1, cod-2, cod-3, cf-1, cf-2, cf-5, cf-7, cf-8, cf-12,
@@ -122,7 +134,7 @@ cf-13, cf-20, cf-21, cf-22, cf-25, cf-28, cf-31, cf-32,
 cf-34, cf-36, cf-37, cf-38, cf-39, cf-40, cf-41, cf-49,
 cf-50, cf-51, cf-52, cf-54, cf-56, cf-57, cf-59, cf-61,
 cf-62, cf-63, cf-65, cf-66, cf-68, cf-69, cf-71, cf-72,
-cf-79, cf-83, cf-85, cf-92, cf-96
+cf-79, cf-83, cf-85, cf-92, cf-96, cf-102, cf-106
 
 Need to be done:
 ...

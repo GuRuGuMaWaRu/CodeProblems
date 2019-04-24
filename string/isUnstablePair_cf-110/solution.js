@@ -45,7 +45,19 @@ true if filename1 and filename2 form an unstable pair, false otherwise.
 
 */
 
-function isUnstablePair(filename1, filename2) {}
+function isUnstablePair(filename1, filename2) {
+  const original = [filename1, filename2].sort((a, b) => {
+    return a < b;
+  });
+  const lowercase = [filename1, filename2].sort((a, b) => {
+    return a.toLowerCase() < b.toLowerCase();
+  });
+
+  if (original[0] !== lowercase[0]) {
+    return true;
+  }
+  return false;
+}
 
 const q1 = ["aa", "AAB"]; // true
 const q2 = ["A", "z"]; // false

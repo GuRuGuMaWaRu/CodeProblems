@@ -6,7 +6,8 @@ cf-{n} = Codefights tests
 Solved:
 
 2019.April
---.-- - isMAC48Address_cf-109
+--.-- - isUnstablePair_cf-110
+24.04 - isMAC48Address_cf-109
 22.04 - htmlEndTagByStartTag_cf-108
 21.04 - findEmailDomain_cf-107
 21.04 - isCaseInsensitivePalindrome_cf-106 (there was a very simple solution! How did I miss it???)

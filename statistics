@@ -6,6 +6,7 @@ cf-{n} = Codefights tests
 Solved:
 
 2019.April
+--.-- - stringsConstruction_cf-111
 24.04 - isUnstablePair_cf-110
 24.04 - isMAC48Address_cf-109
 22.04 - htmlEndTagByStartTag_cf-108

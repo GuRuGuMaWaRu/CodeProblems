@@ -1,35 +1,54 @@
 /*
 
-A media access control address (MAC address) is a unique identifier assigned to network interfaces for communications on the physical network segment.
-
-The standard (IEEE 802) format for printing MAC-48 addresses in human-friendly form is six groups of two hexadecimal digits (0 to 9 or A to F), separated by hyphens (e.g. 01-23-45-67-89-AB).
-
-Your task is to check by given string inputString whether it corresponds to MAC-48 address or not.
+How many strings equal to a can be constructed using letters from the string b? Each letter can be used only once and in one string only.
 
 Example
 
-For inputString = "00-1B-63-84-45-E6", the output should be
-isMAC48Address(inputString) = true;
-For inputString = "Z1-1B-63-84-45-E6", the output should be
-isMAC48Address(inputString) = false;
-For inputString = "not a MAC-48 address", the output should be
-isMAC48Address(inputString) = false.
+For a = "abc" and b = "abccba", the output should be
+stringsConstruction(a, b) = 2.
+
+We can construct 2 strings a with letters from b.
+
 Input/Output
 
 [execution time limit] 4 seconds (js)
 
-[input] string inputString
+[input] string a
+
+String to construct, a contains only lowercase English letters.
 
 Guaranteed constraints:
-15 ≤ inputString.length ≤ 20.
+3 ≤ a.length ≤ 10.
 
-[output] boolean
+[input] string b
 
-true if inputString corresponds to MAC-48 address naming rules, false otherwise.
+String containing needed letters, b contains only lowercase English letters.
+
+Guaranteed constraints:
+3 ≤ b.length ≤ 50.
+
+[output] integer
 
 */
 
-function stringsConstruction(a, b) {}
+function stringsConstruction(a, b) {
+  const calculatedA = a.split("").reduce((calc, letter) => {
+    calc[letter] = calc[letter] ? calc[letter] + 1 : 1;
+    return calc;
+  }, {});
+  const calculatedB = b.split("").reduce((calc, letter) => {
+    calc[letter] = calc[letter] ? calc[letter] + 1 : 1;
+    return calc;
+  }, {});
+  const counts = [];
+
+  for (const char in calculatedA) {
+    const times = Math.floor(calculatedB[char] / calculatedA[char]);
+    counts.push(times || 0);
+  }
+
+  return counts.sort((a, b) => a > b)[0];
+}
 
 const q1 = ["abc", "abccba"]; // 2
 const q2 = ["hnccv", "hncvohcjhdfnhonxddcocjncchnvohchnjohcvnhjdhihsn"]; // 3

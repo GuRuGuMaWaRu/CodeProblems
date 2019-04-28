@@ -39,19 +39,25 @@ string2.length = string1.length.
 */
 
 function isSubstitutionCipher(string1, string2) {
-  const cipher = {};
-  console.log(string1);
+  const cipher1 = {};
+  const cipher2 = {};
+
   for (let i = 0, len = string1.length; i < len; i++) {
-    if (!cipher[string1[i]]) {
-      cipher[string1[i]] = string2[i];
+    if (!cipher1[string1[i]]) {
+      if (!cipher2[string2[i]]) {
+        cipher1[string1[i]] = string2[i];
+        cipher2[string2[i]] = string1[i];
+      } else {
+        return false;
+      }
     } else {
-      if (string2[i] !== cipher[string1[i]]) {
+      if (cipher1[string1[i]] !== string2[i]) {
         return false;
       }
     }
   }
 
-  return cipher;
+  return cipher1;
 }
 
 const q1 = ["aacb", "aabc"]; // true
@@ -76,3 +82,4 @@ console.log(isSubstitutionCipher(q7[0], q7[1]));
 console.log(isSubstitutionCipher(q8[0], q8[1]));
 console.log(isSubstitutionCipher(q9[0], q9[1]));
 console.log(isSubstitutionCipher(q10[0], q10[1]));
+console.log(isSubstitutionCipher(q11[0], q11[1]));

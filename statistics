@@ -6,7 +6,7 @@ cf-{n} = Codefights tests
 Solved:
 
 2019.April
---.-- - 
+--.-- - constructSquare_cf-114
 29.04 - createAnagram_cf-113
 28.04 - isSubstitutionCipher_cf-112 super solution in betterSolution)
 26.04 - stringsConstruction_cf-111 (super solution in betterSolution)

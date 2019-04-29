@@ -28,7 +28,15 @@ The minimum number of replacement operations needed to get an anagram of the str
 
 */
 
-function createAnagram(s, t) {}
+function createAnagram(s, t) {
+  [...s].forEach(char => {
+    if (t.includes(char)) {
+      t = t.replace(char, "");
+    }
+  });
+
+  return t.length;
+}
 
 const q1 = ["AABAA", "BBAAA"]; // 1
 const q2 = ["OVGHK", "RPGUC"]; // 4
@@ -60,4 +68,3 @@ console.log(createAnagram(q7[0], q7[1]));
 console.log(createAnagram(q8[0], q8[1]));
 console.log(createAnagram(q9[0], q9[1]));
 console.log(createAnagram(q10[0], q10[1]));
-console.log(createAnagram(q11[0], q11[1]));

@@ -6,7 +6,8 @@ cf-{n} = Codefights tests
 Solved:
 
 2019.April
---.-- - createAnagram_cf-113
+--.-- - 
+29.04 - createAnagram_cf-113
 28.04 - isSubstitutionCipher_cf-112 super solution in betterSolution)
 26.04 - stringsConstruction_cf-111 (super solution in betterSolution)
 24.04 - isUnstablePair_cf-110

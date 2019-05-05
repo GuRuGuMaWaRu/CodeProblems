@@ -28,14 +28,56 @@ Guaranteed constraints:
 
 */
 
-function constructSquare(s) {}
+function constructSquare(s) {
+  let number = 1;
 
-const q1 = ["ab"]; // 81
-const q2 = ["zzz"]; // -1
-const q3 = ["aba"]; // 900
-const q4 = ["abcbbb"]; // 810000
-const q5 = ["abc"]; // 961
-const q6 = ["aaaabbcde"]; // 999950884
+  const largestNum = s.replace(/\D/gi, 9);
+  number = Math.ceil(Math.sqrt(largestNum));
+
+  // number representation of a string
+  const convertedString = Object.values(
+    s.split("").reduce((calculated, char) => {
+      calculated[char]
+        ? (calculated[char] = calculated[char] + 1)
+        : (calculated[char] = 1);
+      return calculated;
+    }, {})
+  )
+    .sort()
+    .join("");
+
+  while (true) {
+    const toThePower = number ** 2;
+    number = number - 1;
+
+    // number representation of a square
+    const convertedNumber = Object.values(
+      [...toThePower.toString()].reduce((calculated, number) => {
+        calculated[number]
+          ? (calculated[number] = calculated[number] + 1)
+          : (calculated[number] = 1);
+        return calculated;
+      }, {})
+    )
+      .sort()
+      .join("");
+
+    if (convertedNumber === convertedString) {
+      return toThePower;
+    }
+    if (String(toThePower).length < s.length) {
+      return -1;
+    }
+  }
+}
+
+const q1 = "ab"; // 81
+const q2 = "zzz"; // -1
+const q3 = "aba"; // 900
+const q4 = "abcbbb"; // 810000
+const q5 = "abc"; // 961
+const q6 = "aaaabbcde"; // 999950884
+const q7 = "a"; // 81
 
 console.log(constructSquare(q1));
 console.log(constructSquare(q2));
@@ -43,3 +85,4 @@ console.log(constructSquare(q3));
 console.log(constructSquare(q4));
 console.log(constructSquare(q5));
 console.log(constructSquare(q6));
+console.log(constructSquare(q7));

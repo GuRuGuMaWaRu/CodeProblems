@@ -39,7 +39,20 @@ The number of lines needed to store the grouped numbers.
 
 */
 
-function numbersGrouping(a) {}
+function numbersGrouping(a) {
+  let counter = 0;
+  const sorted = {};
+
+  a.sort((a, b) => a - b).forEach(num => {
+    while (num > counter) {
+      counter += 10000;
+    }
+
+    sorted[counter] = (sorted[counter] || 0) + 1;
+  });
+
+  return Object.keys(sorted).length + a.length;
+}
 
 const q1 = [20000, 239, 10001, 999999, 10000, 20566, 29999]; // 11
 const q2 = [
@@ -124,11 +137,11 @@ const q8 = [
   9839239
 ]; // 24
 
-console.log(constructSquare(q1));
-console.log(constructSquare(q2));
-console.log(constructSquare(q3));
-console.log(constructSquare(q4));
-console.log(constructSquare(q5));
-console.log(constructSquare(q6));
-console.log(constructSquare(q7));
-console.log(constructSquare(q8));
+console.log(numbersGrouping(q1));
+console.log(numbersGrouping(q2));
+console.log(numbersGrouping(q3));
+console.log(numbersGrouping(q4));
+console.log(numbersGrouping(q5));
+console.log(numbersGrouping(q6));
+console.log(numbersGrouping(q7));
+console.log(numbersGrouping(q8));

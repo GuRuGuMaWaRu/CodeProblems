@@ -45,7 +45,21 @@ The number of different 2 × 2 squares in matrix.
 
 */
 
-function differentSquares(matrix) {}
+function differentSquares(matrix) {
+  const myMatrix = new Set();
+
+  for (let i = 0, len = matrix.length; i < len - 1; i++) {
+    for (let j = 0, lenJ = matrix[i].length; j < lenJ - 1; j++) {
+      const square = `${matrix[i][j]}${matrix[i][j + 1]}${matrix[i + 1][j]}${
+        matrix[i + 1][j + 1]
+      }`;
+
+      myMatrix.add(square);
+    }
+  }
+
+  return myMatrix.size;
+}
 
 const q1 = [[1, 2, 1], [2, 2, 2], [2, 2, 2], [1, 2, 3], [2, 2, 1]]; // 6
 const q2 = [

@@ -35,7 +35,29 @@ The most frequent number in the sequence s(n), s(step(n)), s(step(step(n))), etc
 
 */
 
-function mostFrequentDigitSum(n) {}
+function mostFrequentDigitSum(n) {
+  const numbers = {};
+  let numOfOccurences = 0;
+  let mostFrequentSum = 0;
+
+  while (n > 0) {
+    const sum = `${n}`.split("").reduce((total, num) => total + Number(num), 0);
+
+    numbers[sum] = (numbers[sum] || 0) + 1;
+    n = n - sum;
+  }
+
+  for (const key in numbers) {
+    if (numbers[key] > numOfOccurences) {
+      numOfOccurences = numbers[key];
+      mostFrequentSum = key;
+    } else if (numbers[key] === numOfOccurences) {
+      mostFrequentSum = mostFrequentSum > key ? mostFrequentSum : key;
+    }
+  }
+
+  return Number(mostFrequentSum);
+}
 
 const q1 = 88; // 9
 const q2 = 8; // 8
@@ -45,10 +67,10 @@ const q5 = 239; // 9
 const q6 = 994; // 9
 const q7 = 99999; // 18
 
-console.log(differentSquares(q1));
-console.log(differentSquares(q2));
-console.log(differentSquares(q3));
-console.log(differentSquares(q4));
-console.log(differentSquares(q5));
-console.log(differentSquares(q6));
-console.log(differentSquares(q7));
+console.log(mostFrequentDigitSum(q1));
+console.log(mostFrequentDigitSum(q2));
+console.log(mostFrequentDigitSum(q3));
+console.log(mostFrequentDigitSum(q4));
+console.log(mostFrequentDigitSum(q5));
+console.log(mostFrequentDigitSum(q6));
+console.log(mostFrequentDigitSum(q7));

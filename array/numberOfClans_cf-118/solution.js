@@ -32,13 +32,32 @@ Guaranteed constraints:
 
 */
 
-function numberOfClans(divisors, k) {}
+function numberOfClans(divisors, k) {
+  const updatedDivisors = new Set(divisors);
+  const clans = new Set();
+
+  for (let i = 1; i <= k; i++) {
+    let name = "";
+
+    updatedDivisors.forEach(divisor => {
+      if (i % divisor === 0) {
+        name += divisor;
+      }
+    });
+
+    if (!clans.has(name)) {
+      clans.add(name);
+    }
+  }
+
+  return clans.size;
+}
 
 const q1 = [[2, 3], 6]; // 4
 const q2 = [[2, 3, 4], 6]; // 5
 const q3 = [[1, 3], 10]; // 2
 const q4 = [[6, 2, 2, 8, 9, 2, 2, 2, 2], 10]; // 5
-const q5 = [[2, 5], 9]; // 9
+const q5 = [[2, 5], 9]; // 3
 const q6 = [[1, 2, 3], 8]; // 4
 const q7 = [[5, 6], 5]; // 2
 const q8 = [[7, 1, 3, 4, 4], 5]; // 3

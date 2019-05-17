@@ -25,7 +25,14 @@ Array of the longest strings, stored in the same order as in the inputArray.
 
 */
 
-function allLongestStrings(inputArray) {}
+function allLongestStrings(inputArray) {
+  const maxLength = inputArray.reduce(
+    (length, item) => (item.length > length ? item.length : length),
+    0
+  );
+
+  return inputArray.filter(item => item.length === maxLength);
+}
 
 const q1 = ["aba", "aa", "ad", "vcd", "aba"]; // ["aba", "vcd", "aba"]
 const q2 = ["aa"]; // ["aa"]

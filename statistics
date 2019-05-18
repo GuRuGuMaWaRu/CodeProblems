@@ -6,7 +6,7 @@ cf-{n} = Codefights tests
 Solved:
 
 2019.May
---.-- - alphabetSubsequence_cf-122
+18.05 - alphabetSubsequence_cf-122 (super solution in betterSolution)
 18.05 - houseOfCats_cf-121
 17.05 - allLongestStrings_cf-120
 17.05 - houseNumbersSum_cf-119
@@ -150,7 +150,7 @@ cf-34, cf-36, cf-37, cf-38, cf-39, cf-40, cf-41, cf-49,
 cf-50, cf-51, cf-52, cf-54, cf-56, cf-57, cf-59, cf-61,
 cf-62, cf-63, cf-65, cf-66, cf-68, cf-69, cf-71, cf-72,
 cf-79, cf-83, cf-85, cf-92, cf-96, cf-102, cf-106, cf-110,
-cf-111, cf-112, cf-115, cf-117
+cf-111, cf-112, cf-115, cf-117, cf-122
 
 Need to be done:
 ...

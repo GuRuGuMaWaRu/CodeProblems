@@ -6,6 +6,7 @@ cf-{n} = Codefights tests
 Solved:
 
 2019.May
+--.-- - minimalNumberOfCoins_cf-123
 18.05 - alphabetSubsequence_cf-122 (super solution in betterSolution)
 18.05 - houseOfCats_cf-121
 17.05 - allLongestStrings_cf-120

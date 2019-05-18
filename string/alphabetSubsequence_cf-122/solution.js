@@ -27,7 +27,19 @@ true if the given string is a subsequence of the alphabet, false otherwise.
 
 */
 
-function alphabetSubsequence(s) {}
+function alphabetSubsequence(s) {
+  let previousCharCode = 0;
+
+  for (let i = 0, len = s.length; i < len; i++) {
+    if (s.charCodeAt(i) <= previousCharCode) {
+      return false;
+    }
+
+    previousCharCode = s.charCodeAt(i);
+  }
+
+  return true;
+}
 
 const q1 = "effg"; // false
 const q2 = "cdce"; // false

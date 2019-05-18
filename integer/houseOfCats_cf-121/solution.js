@@ -31,7 +31,15 @@ Every possible number of people that can be in the house.
 
 */
 
-function houseOfCats(legs) {}
+function houseOfCats(legs) {
+  const numberOfPeople = [];
+
+  for (let i = 0; i <= legs; i += 4) {
+    numberOfPeople.push((legs - i) / 2);
+  }
+
+  return numberOfPeople.sort((a, b) => a - b);
+}
 
 const q1 = 6; // [1, 3]
 const q2 = 2; // [1]

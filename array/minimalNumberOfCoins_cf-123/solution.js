@@ -36,7 +36,18 @@ The minimal number of coins you can use to buy the banana.
 
 */
 
-function minimalNumberOfCoins(coins, price) {}
+function minimalNumberOfCoins(coins, price) {
+  let numberOfCoins = 0;
+
+  coins.reverse().forEach(coin => {
+    while (coin <= price) {
+      numberOfCoins = numberOfCoins + 1;
+      price = price - coin;
+    }
+  });
+
+  return numberOfCoins;
+}
 
 const q1 = [[1, 2, 10], 28]; // 6
 const q2 = [[1, 5, 10, 100], 239]; // 10
@@ -44,8 +55,8 @@ const q3 = [[1], 8]; // 8
 const q4 = [[1, 2, 20, 60, 120], 150]; // 7
 const q5 = [[1, 3, 6, 30], 45]; // 4
 
-console.log(minimalNumberOfCoins(q1));
-console.log(minimalNumberOfCoins(q2));
-console.log(minimalNumberOfCoins(q3));
-console.log(minimalNumberOfCoins(q4));
-console.log(minimalNumberOfCoins(q5));
+console.log(minimalNumberOfCoins(...q1));
+console.log(minimalNumberOfCoins(...q2));
+console.log(minimalNumberOfCoins(...q3));
+console.log(minimalNumberOfCoins(...q4));
+console.log(minimalNumberOfCoins(...q5));

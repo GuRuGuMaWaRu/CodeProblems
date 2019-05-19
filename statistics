@@ -6,7 +6,8 @@ cf-{n} = Codefights tests
 Solved:
 
 2019.May
---.-- - addBorder_cf-124
+--.-- - switchLights_cf-125
+19.05 - addBorder_cf-124
 19.05 - minimalNumberOfCoins_cf-123
 18.05 - alphabetSubsequence_cf-122 (super solution in betterSolution)
 18.05 - houseOfCats_cf-121

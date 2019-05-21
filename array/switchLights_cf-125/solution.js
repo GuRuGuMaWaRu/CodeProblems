@@ -33,7 +33,27 @@ Situation after applying the algorithm - array in the same format as input with 
 
 */
 
-function switchLights(a) {}
+function switchLights(a) {
+  let lights = a.filter(digit => digit === 1).length;
+
+  if (lights > 0) {
+    return a.map(digit => {
+      if (lights % 2 === 0) {
+        if (digit === 1) {
+          lights = lights - 1;
+        }
+        return digit;
+      } else {
+        if (digit === 1) {
+          lights = lights - 1;
+        }
+        return digit === 1 ? 0 : 1;
+      }
+    });
+  } else {
+    return a;
+  }
+}
 
 const q1 = [1, 1, 1, 1, 1]; // [0, 1, 0, 1, 0]
 const q2 = [0, 0]; // [0, 0]
@@ -412,8 +432,8 @@ console.log(switchLights(q2));
 console.log(switchLights(q3));
 console.log(switchLights(q4));
 console.log(switchLights(q5));
-console.log(switchLights(q6));
-console.log(switchLights(q7));
-console.log(switchLights(q8));
-console.log(switchLights(q9));
-console.log(switchLights(q10));
+// console.log(switchLights(q6));
+// console.log(switchLights(q7));
+// console.log(switchLights(q8));
+// console.log(switchLights(q9));
+// console.log(switchLights(q10));

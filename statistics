@@ -6,6 +6,7 @@ cf-{n} = Codefights tests
 Solved:
 
 2019.May
+--.-- - electionsWinners_cf-127
 24.05 - timedReading_cf-126
 21.05 - switchLights_cf-125 (more efficient solution in betterSolution)
 19.05 - addBorder_cf-124

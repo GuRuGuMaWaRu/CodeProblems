@@ -38,7 +38,13 @@ The number of words the boy has read.
 
 */
 
-function timedReading(maxLength, text) {}
+function timedReading(maxLength, text) {
+  return text
+    .replace(/(\W+)/g, " ")
+    .trim()
+    .split(" ")
+    .filter(word => word.length > 0 && word.length <= maxLength).length;
+}
 
 const q1 = [4, "The Fox asked the stork, 'How is the soup?'"]; // 7
 const q2 = [1, "..."]; // 0

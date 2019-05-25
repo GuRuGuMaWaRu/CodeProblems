@@ -40,7 +40,17 @@ Guaranteed constraints:
 
 */
 
-function electionsWinners(votes, k) {}
+function electionsWinners(votes, k) {
+  const leader = Math.max(...votes);
+  const leaders = votes.filter(vote => vote === leader);
+  return votes.filter(vote => {
+    if (vote + k > leader) {
+      return vote;
+    } else if (vote === leader && leaders.length < 2) {
+      return vote;
+    }
+  }).length;
+}
 
 const q1 = [[2, 3, 5, 2], 3]; // 2
 const q2 = [[1, 3, 3, 1, 1], 0]; // 0

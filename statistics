@@ -6,7 +6,7 @@ cf-{n} = Codefights tests
 Solved:
 
 2019.May
---.-- - integerToStringOfFixedWidth_cf-128
+26.05 - integerToStringOfFixedWidth_cf-128
 25.05 - electionsWinners_cf-127 (there are slightly better solutions)
 24.05 - timedReading_cf-126
 21.05 - switchLights_cf-125 (more efficient solution in betterSolution)

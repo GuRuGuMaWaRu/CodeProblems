@@ -34,7 +34,14 @@ The modified version of number as described above.
 
 */
 
-function integerToStringOfFixedWidth(number, width) {}
+function integerToStringOfFixedWidth(number, width) {
+  const numToStr = String(number);
+  const lengthDifference = Math.abs(numToStr.length - width);
+
+  return numToStr.length >= width
+    ? numToStr.slice(lengthDifference)
+    : `${"0".repeat(width - numToStr.length)}${number}`;
+}
 
 const q1 = [1234, 2]; // 34
 const q2 = [1234, 4]; // 1234

@@ -46,7 +46,29 @@ true if a and b are similar, false otherwise.
 
 */
 
-function areSimilar(a, b) {}
+function areSimilar(a, b) {
+  let diff = {};
+
+  a.forEach((el, index) => {
+    if (el !== b[index]) {
+      diff[index] = el;
+    }
+  });
+
+  const diffKeys = Object.keys(diff);
+  if (diffKeys.length === 0) {
+    return true;
+  } else if (diffKeys.length === 2) {
+    if (
+      a[diffKeys[0]] === b[diffKeys[1]] &&
+      a[diffKeys[1]] === b[diffKeys[0]]
+    ) {
+      return true;
+    }
+  }
+
+  return false;
+}
 
 const q1 = [[1, 2, 3], [1, 2, 3]]; // true
 const q2 = [[1, 2, 3], [2, 1, 3]]; // true

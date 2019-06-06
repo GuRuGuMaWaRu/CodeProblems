@@ -5,8 +5,10 @@ cf-{n} = Codefights tests
 
 Solved:
 
+2019.June
+06.06 - adaNumber_cf-129
+
 2019.May
---.-- - adaNumber_cf-129
 28.05 - areSimilar_cf-128
 26.05 - integerToStringOfFixedWidth_cf-128 (super solution in betterSolution)
 25.05 - electionsWinners_cf-127 (there are slightly better solutions)
@@ -150,6 +152,7 @@ Solved:
 Done with help:
 cf-11, cf-26, cf-45, cf-47, cf-48 (check 2nd solution)
 cf-53, cf-73, cf-74, cf-75, cf-86, cf-99, cf-101 (copied solution)
+cf-129
 
 Done by myself but need attention:
 m-1, cod-2, cod-3, cf-1, cf-2, cf-5, cf-7, cf-8, cf-12,

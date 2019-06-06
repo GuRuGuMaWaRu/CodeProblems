@@ -41,23 +41,33 @@ true if line is a valid integer representation, false otherwise.
 */
 
 function adaNumber(line) {
-  const withoutUnderscores = line.split("_");
+  const withoutUnderscores = line.replace(/_/g, "");
+  const hexReg = /^(\d{1,})#(\w{1,})#$/;
+  const baseRegString = "0123456789abcdef";
 
-  for (let item of withoutUnderscores) {
-    if (item.includes("#")) {
-      return `${line}: hexadecimal`;
-    }
-
-    if (!Number.isInteger(+item)) {
-      return `${line}: not a number`;
-    }
+  if (/^\d+$/.test(withoutUnderscores)) {
+    return true; // simple number
   }
 
-  return `${line}: number`;
+  if (withoutUnderscores.endsWith("#")) {
+    const regexed = hexReg.exec(withoutUnderscores);
+
+    if (regexed === null || regexed[1] < 2 || regexed[1] > 16) {
+      return false; // is not validated by regex
+    }
+
+    const baseReg = RegExp(
+      `^[${baseRegString.substring(0, +regexed[1])}]+$`,
+      "i"
+    );
+    return baseReg.test(regexed[2]);
+  }
+
+  return false;
 }
 
 const q1 = "123_456_789"; // true
-const q1_1 = "123t_456a_789t"; // true
+const q1_1 = "123t_456a_789t"; // false
 const q2 = "16#123abc#"; // true
 const q3 = "10#123abc#"; // false
 const q4 = "10#10#123ABC#"; // false
@@ -87,3 +97,11 @@ console.log(adaNumber(q7));
 console.log(adaNumber(q8));
 console.log(adaNumber(q9));
 console.log(adaNumber(q10));
+console.log(adaNumber(q11));
+console.log(adaNumber(q12));
+console.log(adaNumber(q13));
+console.log(adaNumber(q14));
+console.log(adaNumber(q15));
+console.log(adaNumber(q16));
+console.log(adaNumber(q17));
+console.log(adaNumber(q18));

@@ -31,7 +31,48 @@ It's guaranteed that for the given test cases the answer always fits signed 32-b
 */
 
 function threeSplit(a) {
-  return a;
+  // const totalSum = a.reduce((total, item) => total + item, 0);
+  // const third = totalSum / 3;
+  // let runningSum = 0;
+  // let firstStrips = 0;
+  // let totalStrips = 0;
+
+  // a.forEach(number => {
+  //   runningSum += number;
+
+  //   if (runningSum === third) {
+  //     firstStrips += 1;
+  //   }
+
+  //   if (runningSum === third * 2) {
+  //     if (third !== 0) {
+  //       totalStrips += firstStrips;
+  //     }
+  //   }
+  // });
+
+  // return totalStrips;
+  const totalSum = a.reduce((total, item) => total + item, 0);
+  const third = totalSum / 3;
+  let firstStripSum = 0;
+  let totalStrips = 0;
+
+  a.forEach((number, index) => {
+    firstStripSum += number;
+
+    if (firstStripSum === third) {
+      let secondStripSum = 0;
+      for (let i = index + 1; i < a.length - 1; i++) {
+        secondStripSum += a[i];
+
+        if (secondStripSum === third) {
+          totalStrips += 1;
+        }
+      }
+    }
+  });
+
+  return totalStrips;
 }
 
 const q1 = [0, -1, 0, -1, 0, -1]; // 4

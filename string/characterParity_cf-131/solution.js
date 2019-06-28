@@ -19,7 +19,9 @@ Input/Output
 
 */
 
-function characterParity(a) {}
+function characterParity(a) {
+  return isNaN(a) ? "not a digit" : +a % 2 === 0 ? "even" : "odd";
+}
 
 const q1 = "5"; // "odd"
 const q2 = "8"; // "even"

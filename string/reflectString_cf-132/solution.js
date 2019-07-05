@@ -25,8 +25,17 @@ Guaranteed constraints:
 
 */
 
-function reflectString(a) {
-  return isNaN(a) ? "not a digit" : +a % 2 === 0 ? "even" : "odd";
+function reflectString(inputString) {
+  const start = "a".charCodeAt(0);
+  const finish = "z".charCodeAt(0);
+  let newString = "";
+
+  for (let i = 0, len = inputString.length; i < len; i++) {
+    let charCode = inputString.charCodeAt(i);
+    newString += String.fromCharCode(start + (finish - charCode));
+  }
+
+  return newString;
 }
 
 const q1 = "name"; // "mznv"

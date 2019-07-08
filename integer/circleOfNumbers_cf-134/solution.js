@@ -28,7 +28,11 @@ Guaranteed constraints:
 
 */
 
-function circleOfNumbers(n, firstNumber) {}
+function circleOfNumbers(n, firstNumber) {
+  const diff = firstNumber + n / 2;
+
+  return diff >= n ? diff - n : diff;
+}
 
 const q1 = [10, 2]; // 7
 const q2 = [10, 7]; // 2

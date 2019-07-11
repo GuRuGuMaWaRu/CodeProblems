@@ -28,7 +28,27 @@ Note that "letter1 + letter2" and "letter2 + letter1" are equal pairs and we don
 
 */
 
-function newNumeralSystem(number) {}
+function newNumeralSystem(number) {
+  const realNumber = number.charCodeAt(number) - 65;
+  const answers = [];
+  let limit = realNumber;
+
+  for (let i = 0; i <= limit; i++) {
+    for (let j = i; j <= limit; j++) {
+      if (i > j) {
+        break;
+      }
+      if (i + j === realNumber) {
+        answers.push(
+          `${String.fromCharCode(i + 65)} + ${String.fromCharCode(j + 65)}`
+        );
+        limit = j;
+      }
+    }
+  }
+
+  return answers;
+}
 
 const q1 = "G"; // ["A + G", "B + F", "C + E", "D + D"]
 const q2 = "A"; // ["A + A"]
@@ -44,16 +64,16 @@ const q11 = "S"; // ["A + S", "B + R", "C + Q", "D + P", "E + O", "F + N", "G + 
 const q12 = "T"; // ["A + T", "B + S", "C + R", "D + Q", "E + P", "F + O", "G + N", "H + M", "I + L", "J + K"]
 const q13 = "W"; // ["A + W", "B + V", "C + U", "D + T", "E + S", "F + R", "G + Q", "H + P", "I + O", "J + N", "K + M", "L + L"]
 
-console.log(circleOfNumbers(q1));
-console.log(circleOfNumbers(q2));
-console.log(circleOfNumbers(q3));
-console.log(circleOfNumbers(q4));
-console.log(circleOfNumbers(q5));
-console.log(circleOfNumbers(q6));
-console.log(circleOfNumbers(q7));
-console.log(circleOfNumbers(q8));
-console.log(circleOfNumbers(q9));
-console.log(circleOfNumbers(q10));
-console.log(circleOfNumbers(q11));
-console.log(circleOfNumbers(q12));
-console.log(circleOfNumbers(q13));
+console.log(newNumeralSystem(q1));
+console.log(newNumeralSystem(q2));
+console.log(newNumeralSystem(q3));
+console.log(newNumeralSystem(q4));
+console.log(newNumeralSystem(q5));
+console.log(newNumeralSystem(q6));
+console.log(newNumeralSystem(q7));
+console.log(newNumeralSystem(q8));
+console.log(newNumeralSystem(q9));
+console.log(newNumeralSystem(q10));
+console.log(newNumeralSystem(q11));
+console.log(newNumeralSystem(q12));
+console.log(newNumeralSystem(q13));

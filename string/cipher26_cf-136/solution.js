@@ -33,7 +33,31 @@ A decrypted message.
 
 */
 
-function cipher26(message) {}
+function cipher26(message) {
+  let lastChar = 0;
+  let currentChar = 0;
+
+  // return String.fromCharCode(25 + 97);
+  // return "a".charCodeAt(0) - 97;
+  return message
+    .split("")
+    .map(char => {
+      let resultChar;
+      currentChar = char.charCodeAt(0) - 97;
+
+      if (currentChar < lastChar) {
+        resultChar = String.fromCharCode(26 - lastChar + currentChar + 97);
+      } else if (currentChar === lastChar) {
+        resultChar = "a";
+      } else {
+        resultChar = String.fromCharCode(currentChar - lastChar + 97);
+      }
+
+      lastChar = currentChar;
+      return resultChar;
+    })
+    .join("");
+}
 
 const q1 = "taiaiaertkixquxjnfxxdh"; // "thisisencryptedmessage"
 const q2 = "ibttlprimfymqlpgeftwu"; // "itsasecrettoeverybody"
@@ -41,6 +65,7 @@ const q3 = "ftnexvoky"; // "fourtytwo"
 const q4 = "taevzhzmashvjw"; // "thereisnospoon"
 const q5 = "abdgkpvcktdoanbqgxpicxtqon"; // "abcdefghijklmnopqrstuvwxyz"
 const q6 = "z"; // "z"
+const qq = "taia"; // this
 
 console.log(cipher26(q1));
 console.log(cipher26(q2));
@@ -48,3 +73,4 @@ console.log(cipher26(q3));
 console.log(cipher26(q4));
 console.log(cipher26(q5));
 console.log(cipher26(q6));
+console.log(cipher26(qq));

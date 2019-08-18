@@ -37,8 +37,6 @@ function cipher26(message) {
   let lastChar = 0;
   let currentChar = 0;
 
-  // return String.fromCharCode(25 + 97);
-  // return "a".charCodeAt(0) - 97;
   return message
     .split("")
     .map(char => {

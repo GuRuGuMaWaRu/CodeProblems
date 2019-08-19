@@ -25,7 +25,20 @@ The deciphered note.
 */
 
 function stolenLunch(note) {
-  return note;
+  const chars = "abcdefghij";
+  const numbers = "0123456789";
+
+  return note
+    .split("")
+    .map(char => {
+      if (chars.includes(char)) {
+        return char.charCodeAt(0) - 97;
+      } else if (numbers.includes(char)) {
+        return String.fromCharCode(+char + 97);
+      }
+      return char;
+    })
+    .join("");
 }
 
 const q1 = "you'll n4v4r 6u4ss 8t: cdja"; // "you'll never guess it: 2390"

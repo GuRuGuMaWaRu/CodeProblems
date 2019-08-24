@@ -30,7 +30,19 @@ Guaranteed constraints:
 [output] boolean
 */
 
-function higherVersion(ver1, ver2) {}
+function higherVersion(ver1, ver2) {
+  const ver1arr = ver1.split(".").map(Number);
+  const ver2arr = ver2.split(".").map(Number);
+
+  for (let num in ver1arr) {
+    if (ver1arr[num] > ver2arr[num]) {
+      return true;
+    } else if (ver1arr[num] < ver2arr[num]) {
+      return false;
+    }
+  }
+  return false;
+}
 
 const q1 = ["1.2.2", "1.2.0"]; // true
 const q2 = ["1.0.5", "1.1.0"]; // false

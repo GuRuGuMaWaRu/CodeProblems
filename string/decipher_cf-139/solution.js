@@ -28,7 +28,21 @@ Guaranteed constraints:
 [output] string
 */
 
-function decipher(cipher) {}
+function decipher(cipher) {
+  let sum = 0;
+  let result = "";
+
+  for (let i = 0, len = cipher.length; i < len; i++) {
+    sum += cipher[i];
+
+    if (Number(sum) > 96 && Number(sum) < 123) {
+      result += String.fromCharCode(sum);
+      sum = 0;
+    }
+  }
+
+  return result;
+}
 
 const q1 = "10197115121"; // "easy"
 const q2 = "98"; // "b"

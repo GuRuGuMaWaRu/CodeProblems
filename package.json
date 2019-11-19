@@ -3,11 +3,9 @@
   "version": "1.0.0",
   "description": "Code problems",
   "main": "tmp.js",
-  "dependencies": {},
-  "devDependencies": {
-    "husky": "^0.14.3",
-    "prettier": "^1.12.1",
-    "pretty-quick": "^1.10.0"
+  "dependencies": {
+    "prettier": "^1.19.1",
+    "pretty-quick": "^2.0.1"
   },
   "scripts": {
     "precommit": "pretty-quick --staged"
@@ -22,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/GuRuGuMaWaRu/CodeProblems/issues"
   },
-  "homepage": "https://github.com/GuRuGuMaWaRu/CodeProblems#readme"
+  "homepage": "https://github.com/GuRuGuMaWaRu/CodeProblems#readme",
+  "devDependencies": {
+    "husky": "^3.1.0"
+  }
 }

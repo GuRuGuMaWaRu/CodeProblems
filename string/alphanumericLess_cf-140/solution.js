@@ -54,7 +54,64 @@ Guaranteed constraints:
 true if s1 is alphanumerically strictly less than s2, false otherwise.
 */
 
-function alphanumericLess(s1, s2) {}
+function alphanumericLess(s1, s2) {
+  const whatever1 = s1.match(/(\D)|(\d+)/g);
+  const whatever2 = s2.match(/(\D)|(\d+)/g);
+
+  for (let i = 0, len = whatever1.length; i < len; i++) {
+    const token1 = isNaN(Number(whatever1[i]))
+      ? whatever1[i]
+      : Number(whatever1[i]);
+    const token2 = isNaN(Number(whatever2[i]))
+      ? whatever2[i]
+      : Number(whatever2[i]);
+
+    // console.log(`${token1} > ${token2}:`, token1 > token2);
+    // console.log(`${token1} < ${token2}:`, token1 < token2);
+    // console.log(`typeof ${token2} is number:`, typeof token2 === "number");
+    if (typeof token1 === "number" && typeof token2 === "string") {
+      console.log("1");
+      return true;
+    } else if (typeof token1 === "string" && typeof token2 === "number") {
+      console.log("2");
+      return false;
+    } else if (typeof token1 === "string" && typeof token2 === "string") {
+      console.log("3");
+      if (token1 > token2) {
+        console.log("3.1");
+        return false;
+      } else if (token2 < token1) {
+        console.log("3.2");
+        return true;
+      }
+    } else if (typeof token1 === "number" && typeof token2 === "number") {
+      if (token1 > token2) {
+        console.log("4.1");
+        return false;
+      } else if (token1 < token2) {
+        console.log("4.2");
+        return true;
+      }
+    }
+  }
+  // check for the number of segments in each
+  if (whatever1.length < whatever2.length) {
+    console.log("whatever1.length < whatever2.length");
+    return true;
+  } else if (whatever1.length > whatever2.length) {
+    console.log("whatever1.length > whatever2.length");
+    return false;
+  }
+
+  // if both are equal check for total length
+  if (s1.length > s2.length) {
+    console.log("s1.length > s2.length");
+    return true;
+  } else {
+    console.log("s1.length < s2.length");
+    return false;
+  }
+}
 
 const q1 = ["a", "a1"]; // true
 const q2 = ["ab", "a1"]; // false
@@ -71,17 +128,18 @@ const q12 = ["zza1233", "zza1234"]; // true
 const q13 = ["zzz1", "zzz1"]; // false
 const q14 = ["00", "a2"]; // true
 
-console.log(alphanumericLess(...q1));
-console.log(alphanumericLess(...q2));
-console.log(alphanumericLess(...q3));
-console.log(alphanumericLess(...q4));
-console.log(alphanumericLess(...q5));
-console.log(alphanumericLess(...q6));
-console.log(alphanumericLess(...q7));
-console.log(alphanumericLess(...q8));
-console.log(alphanumericLess(...q9));
-console.log(alphanumericLess(...q10));
-console.log(alphanumericLess(...q11));
-console.log(alphanumericLess(...q12));
-console.log(alphanumericLess(...q13));
-console.log(alphanumericLess(...q14));
+// console.log("q1:", alphanumericLess(...q1));
+// console.log("q2:", alphanumericLess(...q2));
+// console.log("q3:", alphanumericLess(...q3));
+console.log("q4:", alphanumericLess(...q4));
+// console.log("q5:", alphanumericLess(...q5));
+// console.log("q6:", alphanumericLess(...q6));
+// console.log("q7:", alphanumericLess(...q7));
+// console.log("q8:", alphanumericLess(...q8));
+// console.log("q9:", alphanumericLess(...q9));
+// console.log("q10:", alphanumericLess(...q10));
+// console.log("q11:", alphanumericLess(...q11));
+// console.log("q12:", alphanumericLess(...q12));
+// console.log("q13:", alphanumericLess(...q13));
+// console.log("q14:", alphanumericLess(...q14));
+// console.log("qq:", alphanumericLess("b", "a"));

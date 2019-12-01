@@ -57,6 +57,9 @@ true if s1 is alphanumerically strictly less than s2, false otherwise.
 function alphanumericLess(s1, s2) {
   const whatever1 = s1.match(/(\D)|(\d+)/g);
   const whatever2 = s2.match(/(\D)|(\d+)/g);
+  console.log(whatever1);
+  // console.log(whatever2);
+  let moreNulls = null;
 
   for (let i = 0, len = whatever1.length; i < len; i++) {
     const token1 = isNaN(Number(whatever1[i]))
@@ -66,6 +69,7 @@ function alphanumericLess(s1, s2) {
       ? whatever2[i]
       : Number(whatever2[i]);
 
+    // console.log(`${token1} - ${token2}`);
     // console.log(`${token1} > ${token2}:`, token1 > token2);
     // console.log(`${token1} < ${token2}:`, token1 < token2);
     // console.log(`typeof ${token2} is number:`, typeof token2 === "number");
@@ -80,13 +84,23 @@ function alphanumericLess(s1, s2) {
       if (token1 > token2) {
         console.log("3.1");
         return false;
-      } else if (token2 < token1) {
+      } else if (token1 < token2) {
         console.log("3.2");
         return true;
       }
     } else if (typeof token1 === "number" && typeof token2 === "number") {
+      console.log("4");
+      if (moreNulls === null) {
+        if (whatever1[i].length > whatever2[i].length) {
+          moreNulls = true;
+        } else if (whatever1[i].length < whatever2[i].length) {
+          moreNulls = false;
+        }
+      }
+      // console.log(Number.isSafeInteger(token1));
       if (token1 > token2) {
         console.log("4.1");
+        // console.log(token1, token2);
         return false;
       } else if (token1 < token2) {
         console.log("4.2");
@@ -103,12 +117,37 @@ function alphanumericLess(s1, s2) {
     return false;
   }
 
-  // if both are equal check for total length
-  if (s1.length > s2.length) {
-    console.log("s1.length > s2.length");
+  // both number are larger than MAX_SAFE_INTEGER
+  if (whatever1 > Number.MAX_SAFE_INTEGER) {
+    const s1first = whatever1[0].slice(0, whatever1[0].length / 2);
+    const s2first = whatever2[0].slice(0, whatever2[0].length / 2);
+
+    if (s1first > s2first) {
+      console.log("5.1");
+      return false;
+    } else if (s1first < s2first) {
+      console.log("5.2");
+      return true;
+    } else {
+      const s1second = whatever1[0].slice(whatever1[0].length / 2);
+      const s2second = whatever2[0].slice(whatever2[0].length / 2);
+
+      if (s1second > s2second || s1second === s2second) {
+        console.log("5.1");
+        return false;
+      } else {
+        console.log("5.2");
+        return true;
+      }
+    }
+  }
+
+  // if both are equal check for nulls in numbers
+  if (moreNulls) {
+    console.log("6.1");
     return true;
   } else {
-    console.log("s1.length < s2.length");
+    console.log("6.2");
     return false;
   }
 }
@@ -127,11 +166,16 @@ const q11 = ["abc123", "abc123"]; // false
 const q12 = ["zza1233", "zza1234"]; // true
 const q13 = ["zzz1", "zzz1"]; // false
 const q14 = ["00", "a2"]; // true
+const q95 = ["12345678909876543210", "12345678909876543211"]; // true
+const q96 = ["x817skjd8309218xn", "x817sljd8309217xn"]; // true
+const q97 = ["12345678909876543219", "12345678909876543210"]; // true
+const q98 = ["0012a012b0000013", "0012a0012b00013"]; // false
+const q99 = ["lckj0982871zdj12819", "lckj00982871skdj12820"]; // false
 
 // console.log("q1:", alphanumericLess(...q1));
 // console.log("q2:", alphanumericLess(...q2));
 // console.log("q3:", alphanumericLess(...q3));
-console.log("q4:", alphanumericLess(...q4));
+// console.log("q4:", alphanumericLess(...q4));
 // console.log("q5:", alphanumericLess(...q5));
 // console.log("q6:", alphanumericLess(...q6));
 // console.log("q7:", alphanumericLess(...q7));
@@ -142,4 +186,9 @@ console.log("q4:", alphanumericLess(...q4));
 // console.log("q12:", alphanumericLess(...q12));
 // console.log("q13:", alphanumericLess(...q13));
 // console.log("q14:", alphanumericLess(...q14));
-// console.log("qq:", alphanumericLess("b", "a"));
+console.log("q95:", alphanumericLess(...q95));
+// console.log("q96:", alphanumericLess(...q96));
+console.log("q97:", alphanumericLess(...q97));
+// console.log("q98:", alphanumericLess(...q98));
+// console.log("q99:", alphanumericLess(...q99));
+// console.log("qq:", alphanumericLess("bc004b02", "bc4b0002"));

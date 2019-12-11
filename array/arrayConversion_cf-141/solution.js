@@ -26,7 +26,30 @@ Guaranteed constraints:
 */
 
 function arrayConversion(inputArray) {
-  return inputArray;
+  const iteration = 1;
+
+  const convertArray = (arr, iter) => {
+    if (arr.length === 1) {
+      return arr[0];
+    }
+    const updatedArr = arr.reduce((final, curr, i) => {
+      if (i & 1) {
+        if (iter & 1) {
+          final[final.length - 1] += curr;
+          return final;
+        } else {
+          final[final.length - 1] *= curr;
+          return final;
+        }
+      } else {
+        return [...final, curr];
+      }
+    }, []);
+
+    return convertArray(updatedArr, iter + 1);
+  };
+
+  return convertArray(inputArray, iteration);
 }
 
 const q1 = [1, 2, 3, 4, 5, 6, 7, 8]; // 186

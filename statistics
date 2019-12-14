@@ -6,6 +6,7 @@ cf-{n} = Codefights tests
 Solved:
 
 2019.December
+--.-- - pairOfShoes_cf-143
 14.12 - arrayPreviousLess_cf-142
 11.12 - arrayConversion_cf-141
 01.12 - alphanumericLess_cf-140 (still don't know how betterSolution works, but it looks genious!)

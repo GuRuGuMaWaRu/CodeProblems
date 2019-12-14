@@ -24,7 +24,19 @@ Array containing answer values computed as described above.
 */
 
 function arrayPreviousLess(items) {
-  return items;
+  return items.map((item, i) => {
+    // const newArr = items.slice(0, i);
+    let newItem = -1;
+
+    for (let j = i; j >= 0; j--) {
+      if (items[j] < item) {
+        newItem = items[j];
+        break;
+      }
+    }
+
+    return newItem;
+  });
 }
 
 const q1 = [3, 5, 2, 4, 5]; // [-1, 3, -1, 2, 4]

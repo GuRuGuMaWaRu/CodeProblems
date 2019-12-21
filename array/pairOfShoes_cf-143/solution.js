@@ -43,7 +43,26 @@ true if it is possible to pair the shoes, false otherwise.
 */
 
 function pairOfShoes(shoes) {
-  return shoes;
+  const shoesObj = {};
+
+  shoes.forEach(shoe => {
+    const isLeft = shoe[0] === 0;
+    const size = shoe[1];
+
+    if (!shoesObj[size]) {
+      shoesObj[size] = isLeft ? -1 : 1;
+    } else {
+      shoesObj[size] += isLeft ? -1 : 1;
+    }
+  });
+
+  for (let shoe in shoesObj) {
+    if (shoesObj[shoe] !== 0) {
+      return false;
+    }
+  }
+
+  return true;
 }
 
 const q1 = [
@@ -89,9 +108,9 @@ const q6 = [
   [0, 1]
 ]; // false
 
-console.log("q1:", arrayPreviousLess(q1));
-console.log("q2:", arrayPreviousLess(q2));
-console.log("q3:", arrayPreviousLess(q3));
-console.log("q4:", arrayPreviousLess(q4));
-console.log("q5:", arrayPreviousLess(q5));
-console.log("q6:", arrayPreviousLess(q6));
+console.log("q1:", pairOfShoes(q1));
+console.log("q2:", pairOfShoes(q2));
+console.log("q3:", pairOfShoes(q3));
+console.log("q4:", pairOfShoes(q4));
+console.log("q5:", pairOfShoes(q5));
+console.log("q6:", pairOfShoes(q6));

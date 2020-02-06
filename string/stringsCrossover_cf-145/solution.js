@@ -34,7 +34,32 @@ result.length = inputArray[i].length.
 [output] integer
 */
 
-function stringsCrossover(inputArray, result) {}
+function stringsCrossover(inputArray, result) {
+  let count = 0;
+
+  for (let i = 0, len = inputArray.length; i < len; i++) {
+    const firstStr = inputArray[i];
+
+    for (let j = i + 1; j < len; j++) {
+      const secondStr = inputArray[j];
+      const secondStrSplit = secondStr.split('');
+
+      const isFail = secondStrSplit.some((char, idx) => {
+        if (firstStr[idx] !== result[idx] && char !== result[idx]) {
+          return true;
+        } else {
+          return false;
+        }
+      });
+
+      if (!isFail) {
+        count += 1;
+      }
+    }
+  }
+
+  return count;
+}
 
 const q1 = [['abc', 'aaa', 'aba', 'bab'], 'bbb']; // 2
 const q2 = [['aacccc', 'bbcccc'], 'abdddd']; // 0

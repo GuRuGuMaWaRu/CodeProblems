@@ -6,7 +6,7 @@ cf-{n} = Codefights tests
 Solved:
 
 2020.February
---.-- - cyclicString_cf-146
+17.02 - cyclicString_cf-146
 06.02 - stringsCrossover_cf-145
 
 2020.January
@@ -179,7 +179,7 @@ Solved:
 Done with help:
 cf-11, cf-26, cf-45, cf-47, cf-48 (check 2nd solution)
 cf-53, cf-73, cf-74, cf-75, cf-86, cf-99, cf-101 (copied solution)
-cf-129, cf-133, cf-144
+cf-129, cf-133, cf-144, cf-146
 
 Done by myself but need attention:
 m-1, cod-2, cod-3, cf-1, cf-2, cf-5, cf-7, cf-8, cf-12,

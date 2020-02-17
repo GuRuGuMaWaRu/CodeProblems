@@ -19,8 +19,18 @@ Guaranteed constraints:
 
 [output] integer
 */
+function cyclicString(s) {
+  for (let i = 0, len = s.length; i < len; i++) {
+    const substring = s.slice(0, i);
+    const testSubstring = substring.repeat(s.length * 2);
 
-function cyclicString(s) {}
+    if (testSubstring.includes(s)) {
+      return substring.length;
+    }
+  }
+
+  return s.length;
+}
 
 const q1 = 'cabca'; // 3
 const q2 = 'aba'; // 2
@@ -38,6 +48,6 @@ console.log('q3:', cyclicString(q3));
 console.log('q4:', cyclicString(q4));
 console.log('q5:', cyclicString(q5));
 console.log('q6:', cyclicString(q6));
-console.log('q6:', cyclicString(q7));
-console.log('q6:', cyclicString(q8));
-console.log('q6:', cyclicString(q9));
+console.log('q7:', cyclicString(q7));
+console.log('q8:', cyclicString(q8));
+console.log('q9:', cyclicString(q9));

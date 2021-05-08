@@ -5,25 +5,30 @@ Given a string and some integers l and r (l ≤ r), check if it's possible to ob
 
 */
 function beautifulText(inputString, l, r) {
-  let isBeautiful = false;
+  // let isBeautiful = false;
 
-  for (let i = l - 1; i < r; i++) {
-    if (inputString[i] === ' ') {
-      isBeautiful = true;
+  // for (let i = l - 1; i < r; i++) {
+  //   if (inputString[i] === ' ') {
+  //     isBeautiful = true;
 
-      for (let j = i * 2 + 1; j <= inputString.length; j += i + 1) {
-        console.log(
-          `length: ${inputString.length}; i: ${i}; j: ${j}; char: ${inputString[j]}`
-        );
-        if (inputString[j] !== ' ') {
-          // isBeautiful = false;
-          break;
-        }
-      }
-    }
-  }
+  //     for (let j = i * 2 + 1; j <= inputString.length; j += i + 1) {
+  //       console.log(
+  //         `length: ${inputString.length}; i: ${i}; j: ${j}; char: ${inputString[j]}`
+  //       );
+  //       if (inputString[j] !== ' ') {
+  //         // isBeautiful = false;
+  //         break;
+  //       }
+  //     }
+  //   }
+  // }
 
-  return isBeautiful;
+  // return isBeautiful;
+
+  // we use a loop with a step from l to r, and we ask ourselves at every junction whether we have a "space" before or after - if there is no space, then we
+  // increase our step value and start anew
+
+  // after we find the right step value, we should use it to split our string into chunks, trim hanging spaces, check if all resulting substring are equal in length
 }
 
 const q1 = ['Look at this example of a correct text', 5, 15]; // true

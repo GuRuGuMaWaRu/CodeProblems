@@ -1,23 +1,8 @@
 /*
-You're given a substring s of some cyclic string. What's the length of the smallest possible string that can be concatenated to itself many times to obtain this cyclic string?
+Consider a string containing only letters and whitespaces. It is allowed to replace some (possibly, none) whitespaces with newline symbols to obtain a multiline text. Call a multiline text beautiful if and only if each of its lines (i.e. substrings delimited by a newline character) contains an equal number of characters (only letters and whitespaces should be taken into account when counting the total while newline characters shouldn't). Call the length of the line the text width.
 
-Example
+Given a string and some integers l and r (l ≤ r), check if it's possible to obtain a beautiful text from the string with a text width that's within the range [l, r].
 
-For s = "cabca", the output should be
-cyclicString(s) = 3.
-
-"cabca" is a substring of a cycle string "abcabcabcabc..." that can be obtained by concatenating "abc" to itself. Thus, the answer is 3.
-
-Input/Output
-
-[execution time limit] 4 seconds (js)
-
-[input] string s
-
-Guaranteed constraints:
-3 ≤ s.length ≤ 15.
-
-[output] integer
 */
 function beautifulText(inputString, l, r) {
   let isBeautiful = false;
